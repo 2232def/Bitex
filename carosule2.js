@@ -1,5 +1,7 @@
 // Update carosule2.js
-const section6CarouselWrapper = document.getElementById("section6CarouselWrapper");
+const section6CarouselWrapper = document.getElementById(
+  "section6CarouselWrapper"
+);
 const section6PrevBtn = document.getElementById("section6PrevBtn");
 const section6NextBtn = document.getElementById("section6NextBtn");
 
@@ -13,9 +15,9 @@ if (section6CarouselWrapper && section6PrevBtn && section6NextBtn) {
     // Additional offset: -500px per slide
     const baseOffset = 140;
     const nextoffset = 80;
-    const translateX = baseOffset - (section6CurrentIndex * 500) -nextoffset;
+    const translateX = baseOffset - section6CurrentIndex * 500 - nextoffset;
     section6CarouselWrapper.style.transform = `translateX(${translateX}px)`;
-    
+
     section6PrevBtn.disabled = section6CurrentIndex === 0;
     section6NextBtn.disabled = section6CurrentIndex === section6TotalCards - 1;
   }
@@ -25,17 +27,25 @@ if (section6CarouselWrapper && section6PrevBtn && section6NextBtn) {
     updateSection6Carousel();
   }
 
-  section6NextBtn.addEventListener("click", () => goToSection6Slide(section6CurrentIndex + 1));
-  section6PrevBtn.addEventListener("click", () => goToSection6Slide(section6CurrentIndex - 1));
+  section6NextBtn.addEventListener("click", () =>
+    goToSection6Slide(section6CurrentIndex + 1)
+  );
+  section6PrevBtn.addEventListener("click", () =>
+    goToSection6Slide(section6CurrentIndex - 1)
+  );
 
   // Touch/swipe support
   let section6StartX = 0;
   let section6IsDragging = false;
 
-  section6CarouselWrapper.addEventListener("touchstart", (e) => {
-    section6StartX = e.touches[0].clientX;
-    section6IsDragging = true;
-  }, { passive: true });
+  section6CarouselWrapper.addEventListener(
+    "touchstart",
+    (e) => {
+      section6StartX = e.touches[0].clientX;
+      section6IsDragging = true;
+    },
+    { passive: true }
+  );
 
   section6CarouselWrapper.addEventListener("touchend", (e) => {
     if (!section6IsDragging) return;
@@ -48,7 +58,7 @@ if (section6CarouselWrapper && section6PrevBtn && section6NextBtn) {
   });
 
   // Recalculate on window resize
-  window.addEventListener('resize', updateSection6Carousel);
+  window.addEventListener("resize", updateSection6Carousel);
 
   // Initialize
   updateSection6Carousel();
