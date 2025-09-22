@@ -361,6 +361,7 @@ section.section-2 .feature p {
   height: 362.5498434px;
   display: flex;
   background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 }
 
 .section-4 .container .cards .card-left {
