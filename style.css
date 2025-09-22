@@ -197,7 +197,7 @@ html {
   }
 
   .Language {
-    margin-left: 451px;
+    margin-left: 230px;
     padding: 0 1rem;
     justify-content: center;
     gap: 0.25rem;
@@ -295,6 +295,7 @@ html {
 
   .Language {
     gap: 0.25rem;
+    margin-left: 130px;
   }
 }
 
@@ -316,6 +317,11 @@ html {
   .lang-button {
     padding: 0.2rem 0.4rem;
     font-size: 0.6rem;
+  }
+
+    .Language {
+    gap: 0.25rem;
+    margin-left: 100px;
   }
 }
 
@@ -547,7 +553,6 @@ section.section-2 .feature {
 }
 
 section.section-2 button.tag {
-  background: white;
   border: 1px solid #ddd;
   padding: 8px 12px;
   border-radius: 4px;
@@ -583,7 +588,6 @@ section.section-2 .feature p {
   }
 
   section.section-2 header.hero {
-    text-align: center;
     margin-bottom: 40px;
     padding: 0 10px;
   }
@@ -671,15 +675,14 @@ section.section-2 .feature p {
   }
 
   section.section-2 button.tag {
-    border: none;
     padding: 12px 20px;
-    border-radius: 25px;
     font-weight: 600;
     cursor: default;
     min-width: auto;
     width: 100%;
     text-align: center;
     font-size: 14px;
+    border: 1px solid #070707;
     letter-spacing: 0.5px;
     text-transform: uppercase;
   }
