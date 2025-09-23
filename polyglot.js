@@ -91,7 +91,7 @@ let translations = {
         "footer.business.title": "OUR BUSINESS",
         "footer.company.title": "COMPANY",
         "footer.news.title": "NEWS",
-        "footer.contact.title": "お問い合わせ",
+        "footer.contact.title": "CONTACT US",
         "footer.business.realestate": "不動産事業",
         "footer.business.energy": "エネルギー事業",
         "footer.business.medical": "再生医療事業",
