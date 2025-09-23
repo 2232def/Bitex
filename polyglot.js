@@ -46,26 +46,28 @@ let translations = {
         // Section 4
         "section4.title": "Global Network",
         "section4.subtitle": "グローバル展開",
+        "section4.readmore": "続きを読む",
 
         // Section 5
         "section5.title": "News",
         "section5.subtitle": "最新ニュース・お知らせ",
-        "section5.readmore": "Read more",
+        "section5.readmore": "続きを読む",
         "section5.news.content": "ニュース内容ニュース内容ニュース内容ニュース内容",
 
         // Section 6
         "section6.title": "Recruit",
         "section6.subtitle": "採用情報",
+        "section6.readmore": "続きを読む",
 
         // Section 7
         "section7.title": "Philosophy",
         "section7.content": "企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン",
 
         // Section 8 (Footer)
-        "footer.business.title": "OUR BUSINESS",
-        "footer.company.title": "COMPANY",
-        "footer.news.title": "NEWS",
-        "footer.contact.title": "CONTACT US",
+        "footer.business.title": "事業内容",
+        "footer.company.title": "会社情報",
+        "footer.news.title": "ニュース",
+        "footer.contact.title": "お問い合わせ",
         "footer.business.realestate": "不動産事業",
         "footer.business.energy": "エネルギー事業",
         "footer.business.medical": "再生医療事業",
