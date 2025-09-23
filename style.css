@@ -1579,6 +1579,45 @@ section.section-2 .feature p {
     padding-top: 20px;
     border-top: 1px solid #eee;
   }
+
+  /* Language buttons - JP/EN format for tablets */
+  .Language {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .Language::before {
+    content: "JP/EN";
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2a2a;
+    padding: 0.375rem 0.75rem;
+    transition: all 0.2s ease;
+    display: block;
+    text-align: center;
+    background: transparent;
+  }
+
+  .Language:hover::before {
+    background: #f0f0f0;
+  }
+
+  .Language.jp-active::before {
+    content: "JP/en";
+    background: #ffffff00;
+    color: #000000;
+
+  }
+
+  .Language.en-active::before {
+    content: "jp/EN";
+    background: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .lang-button {
+    display: none;
+  }
 }
 
 
