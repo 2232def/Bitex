@@ -1155,6 +1155,14 @@ section.section-2 .feature p {
   background-color: rgba(77, 77, 77, 1);
 }
 
+.section-4 .cards-section .divider-1 .cards:nth-child(2) .card-left .country,
+.section-4 .cards-section .divider-1 .cards:nth-child(2) .card-left h1,
+.section-4 .cards-section .divider-1 .cards:nth-child(2) .card-left .postal,
+.section-4 .cards-section .divider-1 .cards:nth-child(2) .card-left .address,
+.section-4 .cards-section .divider-1 .cards:nth-child(2) .card-left .phone {
+  color: white;
+}
+
 .section-4 .container .cards-section .divider-2 {
   display: flex;
   flex-direction: column;
@@ -1166,6 +1174,14 @@ section.section-2 .feature p {
 
 .section-4 .cards-section .divider-2 .cards:nth-child(1) {
   background-color: rgba(77, 77, 77, 1);
+}
+
+.section-4 .cards-section .divider-2 .cards:nth-child(1) .card-left .country,
+.section-4 .cards-section .divider-2 .cards:nth-child(1) .card-left h1,
+.section-4 .cards-section .divider-2 .cards:nth-child(1) .card-left .postal,
+.section-4 .cards-section .divider-2 .cards:nth-child(1) .card-left .address,
+.section-4 .cards-section .divider-2 .cards:nth-child(1) .card-left .phone {
+  color: white;
 }
 
 .section-4 .container .cards {
