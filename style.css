@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:  'Helvetica', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 body {
@@ -70,12 +70,12 @@ html {
   flex-direction: column;
 }
 
-.navbar-menu li a{
+.navbar-menu li a {
   font-size: 18px;
-  font-family:  'Helvetica', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
-.navbar-menu li span{
+.navbar-menu li span {
   font-size: 13px;
 }
 
@@ -580,7 +580,7 @@ html {
 }
 
 section.section-2 {
-  height:657px;
+  height: 657px;
   width: 100vw;
 }
 
@@ -595,8 +595,8 @@ section.section-2 header.hero h1 {
   margin: 0 0 6px 0;
   font-size: 34px;
   letter-spacing: 0.2px;
-  font-weight:bold;
-  font-family:  'Helvetica', sans-serif;
+  font-weight: bold;
+  font-family: 'Helvetica', sans-serif;
 }
 
 section.section-2 p.subtitle {
@@ -630,8 +630,8 @@ section.section-2 .row {
 section.section-2 .label {
   width: 110px;
   font-size: 14px;
-  color:rgb(77, 77, 77);
-;
+  color: rgb(77, 77, 77);
+  ;
 }
 
 section.section-2 .value {
@@ -863,13 +863,19 @@ section.section-2 .feature p {
 }
 
 /* Very small screens (320px and below) */
-@media (max-width: 320px) {
+@media (max-width: 326px) {
   section.section-2 {
-    padding: 60px 0 40px;
+    padding: 0px 0 40px;
+
   }
+
+
 
   section.section-2 .container {
     padding: 0 10px;
+
+    margin-left: 9px;
+    margin-top: 80px;
   }
 
   section.section-2 header.hero h1 {
@@ -917,7 +923,7 @@ section.section-2 .feature p {
 
 .business_title {
   margin: 0;
-    color: rgba(246, 246, 246, 1);
+  color: rgba(246, 246, 246, 1);
   font-size: 44px;
   line-height: 1;
   font-weight: 700;
@@ -929,7 +935,7 @@ section.section-2 .feature p {
   font-size: 12px;
   text-transform: none;
   opacity: 0.95;
-    color:rgba(246, 246, 246, 1);
+  color: rgba(246, 246, 246, 1);
   text-wrap: wrap;
 }
 
@@ -1229,7 +1235,7 @@ section.section-2 .feature p {
 /* Medium Tablet Responsive - Up to 900px */
 @media (max-width: 900px) {
   section.section-2 {
-    margin-left: 50px;
+    margin-left: 6px;
     margin-top: 90px;
     width: calc(100% - 50px);
   }
@@ -1760,34 +1766,35 @@ section.section-2 .feature p {
 
 /* Responsive styles for 326px - Carousel cards only */
 @media (max-width: 326px) {
+
   .carousel-card {
     width: 95% !important;
     margin: 0 auto;
     padding: 4px !important;
     border-radius: 8px !important;
   }
-  
+
   .carousel-card .card-left {
     padding: 8px !important;
   }
-  
+
   .carousel-card .card-left h3 {
     font-size: 14px !important;
     margin-bottom: 6px !important;
     line-height: 1.3 !important;
   }
-  
+
   .carousel-card .card-left p {
     font-size: 11px !important;
     line-height: 1.4 !important;
     margin-bottom: 4px !important;
   }
-  
+
   .carousel-card .card-right {
     min-width: 60px !important;
     height: 60px !important;
   }
-  
+
   .carousel-wrapper {
     gap: 8px !important;
   }
