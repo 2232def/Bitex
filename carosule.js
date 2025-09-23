@@ -6,16 +6,11 @@ if (carouselWrapper && prevBtn && nextBtn) {
   let currentIndex = 0;
   const slides = Array.from(carouselWrapper.children);
   const totalCards = slides.length;
-
-  // Size wrapper and slides dynamically
-  function setWidths() {
-    carouselWrapper.style.width = `${totalCards * 100}%`;
-    slides.forEach((s) => (s.style.width = `${100 / totalCards}%`));
-  }
+  const cardWidth = 320; // 300px card + 20px padding (10px each side)
 
   function updateCarousel() {
-    const translateX = -(currentIndex * (100 / totalCards));
-    carouselWrapper.style.transform = `translateX(${translateX}%)`;
+    const translateX = -(currentIndex * cardWidth);
+    carouselWrapper.style.transform = `translateX(${translateX}px)`;
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === totalCards - 1;
   }
@@ -51,12 +46,6 @@ if (carouselWrapper && prevBtn && nextBtn) {
     isDragging = false;
   });
 
-  // Recompute on resize
-  window.addEventListener("resize", () => {
-    setWidths();
-    updateCarousel();
-  });
-
-  sets();
+  // Initial setup
   updateCarousel();
 }
