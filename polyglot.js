@@ -12,7 +12,7 @@ let translations = {
         "nav.recruit": "RECRUIT",
         "nav.inquiry": "INQUIRT",
         "nav.home.sub": "ホーム",
-        "nav.company.sub": "会社",
+        "nav.company.sub": "事業内容",
         "nav.profile.sub": "プロフィール",
         "nav.news.sub": "ニュース",
         "nav.recruit.sub": "採用情報",
@@ -41,6 +41,7 @@ let translations = {
         "section2.feature.overseas.desc": "多国籍企業の成長をトータルサポート",
         "section2.feature.consulting": "経営コンサルティング",
         "section2.feature.consulting.desc": "豊富な経験に基づく実践的支援",
+        "section2.feature.realestate.related": "不動産関連事業",
 
         // Section 3
         "section3.title": "Our Business",
@@ -58,30 +59,32 @@ let translations = {
         "section4.japan.phone": "03-0000-0000",
         "section4.england.country": "England",
         "section4.england.office": "英国支社",
-        "section4.england.postal": "SW1A 1AA",
+        "section4.england.postal": "〒000-0000",
         "section4.england.address": "ロンドン住所所在地住所所在地住所所在地住所所在地住所所在地住所所在地",
         "section4.england.phone": "+44-20-0000-0000",
         "section4.singapore.country": "Singapore",
         "section4.singapore.office": "シンガポール支社",
-        "section4.singapore.postal": "018989",
+        "section4.singapore.postal": "〒000-0000",
         "section4.singapore.address": "シンガポール住所所在地住所所在地住所所在地住所所在地住所所在地",
         "section4.singapore.phone": "+65-0000-0000",
         "section4.uae.country": "UAE",
         "section4.uae.office": "UAE支社",
-        "section4.uae.postal": "00000",
+        "section4.uae.postal": "〒000-0000",
         "section4.uae.address": "ドバイ住所所在地住所所在地住所所在地住所所在地住所所在地住所所在地",
         "section4.uae.phone": "+971-0000-0000",
+        
+        "section4.readmore": "Read more",
 
         // Section 5
         "section5.title": "News",
         "section5.subtitle": "最新ニュース・お知らせ",
-        "section5.readmore": "続きを読む",
+        "section5.readmore": "Read more",
         "section5.news.content": "ニュース内容ニュース内容ニュース内容ニュース内容",
 
         // Section 6
         "section6.title": "Recruit",
         "section6.subtitle": "採用情報",
-        "section6.readmore": "続きを読む",
+        "section6.readmore": "Read more",
 
         // Section 7
         "section7.title": "Philosophy",
@@ -149,6 +152,7 @@ let translations = {
         "section2.feature.overseas.desc": "Total support for multinational corporate growth",
         "section2.feature.consulting": "Management Consulting",
         "section2.feature.consulting.desc": "Practical support based on abundant experience",
+        "section2.feature.realestate.related": "Real Estate Related Business",
 
         // Section 3
         "section3.title": "Our Business",
@@ -166,17 +170,17 @@ let translations = {
         "section4.japan.phone": "03-0000-0000",
         "section4.england.country": "England",
         "section4.england.office": "UK Branch Office",
-        "section4.england.postal": "SW1A 1AA",
+        "section4.england.postal": "〒000-0000",
         "section4.england.address": "London Address Location Address Location Address Location Address Location",
         "section4.england.phone": "+44-20-0000-0000",
         "section4.singapore.country": "Singapore",
         "section4.singapore.office": "Singapore Branch Office",
-        "section4.singapore.postal": "018989",
+        "section4.singapore.postal": "〒000-0000",
         "section4.singapore.address": "Singapore Address Location Address Location Address Location Address",
         "section4.singapore.phone": "+65-0000-0000",
         "section4.uae.country": "UAE",
         "section4.uae.office": "UAE Branch Office",
-        "section4.uae.postal": "00000",
+        "section4.uae.postal": "〒000-0000",
         "section4.uae.address": "Dubai Address Location Address Location Address Location Address Location",
         "section4.uae.phone": "+971-0000-0000",
 
