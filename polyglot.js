@@ -5,12 +5,12 @@ let currentLanguage = 'ja';
 let translations = {
     ja: {
         // Navbar
-        "nav.home": "ホーム",
-        "nav.company": "会社",
-        "nav.profile": "プロフィール",
-        "nav.news": "ニュース",
-        "nav.recruit": "採用情報",
-        "nav.inquiry": "お問い合わせ",
+        "nav.home": "HOME",
+        "nav.company": "COMPANY",
+        "nav.profile": "PROFILE",
+        "nav.news": "NEWS",
+        "nav.recruit": "RECRUIT",
+        "nav.inquiry": "INQUIRT",
         "nav.home.sub": "ホーム",
         "nav.company.sub": "会社",
         "nav.profile.sub": "プロフィール",
@@ -37,6 +37,10 @@ let translations = {
         "section2.feature.medical.desc": "先端技術による健康と未来への挑戦",
         "section2.feature.it": "IT 事業",
         "section2.feature.it.desc": "デジタル技術で社会課題の解決を支援",
+        "section2.feature.overseas": "海外進出サポート",
+        "section2.feature.overseas.desc": "多国籍企業の成長をトータルサポート",
+        "section2.feature.consulting": "経営コンサルティング",
+        "section2.feature.consulting.desc": "豊富な経験に基づく実践的支援",
 
         // Section 3
         "section3.title": "Our Business",
@@ -64,9 +68,9 @@ let translations = {
         "section7.content": "企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン企業理念･ビジョン",
 
         // Section 8 (Footer)
-        "footer.business.title": "事業内容",
-        "footer.company.title": "会社情報",
-        "footer.news.title": "ニュース",
+        "footer.business.title": "OUR BUSINESS",
+        "footer.company.title": "COMPANY",
+        "footer.news.title": "NEWS",
         "footer.contact.title": "お問い合わせ",
         "footer.business.realestate": "不動産事業",
         "footer.business.energy": "エネルギー事業",
@@ -82,7 +86,7 @@ let translations = {
 
         // Language buttons
         "lang.japanese": "日本語",
-        "lang.english": "英語",
+        "lang.english": "ENGLISH",
         "lang.jp": "JP",
         "lang.en": "EN"
     },
@@ -94,7 +98,7 @@ let translations = {
         "nav.profile": "PROFILE",
         "nav.news": "NEWS",
         "nav.recruit": "RECRUIT",
-        "nav.inquiry": "INQUIRY",
+        "nav.inquiry": "INQUIRT",
         // "nav.home.sub": "Home",
         // "nav.company.sub": "Company",
         // "nav.profile.sub": "Profile",
@@ -121,6 +125,10 @@ let translations = {
         "section2.feature.medical.desc": "Challenging health and future with advanced technology",
         "section2.feature.it": "IT Business",
         "section2.feature.it.desc": "Supporting solutions to social issues with digital technology",
+        "section2.feature.overseas": "Overseas Expansion Support",
+        "section2.feature.overseas.desc": "Total support for multinational corporate growth",
+        "section2.feature.consulting": "Management Consulting",
+        "section2.feature.consulting.desc": "Practical support based on abundant experience",
 
         // Section 3
         "section3.title": "Our Business",
@@ -164,7 +172,7 @@ let translations = {
 
         // Language buttons
         "lang.japanese": "Japanese",
-        "lang.english": "English",
+        "lang.english": "ENGLISH",
         "lang.jp": "JP",
         "lang.en": "EN"
     }
