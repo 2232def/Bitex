@@ -1700,6 +1700,9 @@ section.section-2 .feature p {
     overflow: hidden;
     padding: 40px 0 60px;
     background: #000;
+    padding-left: 132px;
+    padding-right: 132px;
+    
   }
 
   .carousel-wrapper {
@@ -1710,8 +1713,7 @@ section.section-2 .feature p {
 
   .carousel-card {
     flex-shrink: 0;
-    width: 300px;
-    padding: 0 10px;
+    padding-right: 142px;
   }
 
   .carousel-card .cards {
@@ -1840,26 +1842,16 @@ section.section-2 .feature p {
 
   @media (max-width: 480px) {
     .section-4 .carousel-navigation {
-      gap: 350px;
-    }
-
-    .section-4 .container .cards{
-      width: 300px;
+      gap: 250px;
     }
   }
-
-
 
 /* Responsive styles for 326px - Carousel cards only */
 @media (max-width: 326px) {
-
-  .carousel-card {
-    width: 95% !important;
-    margin: 0 auto;
-    padding: 4px !important;
-    border-radius: 8px !important;
+  .section-4 .carousel-navigation {
+    gap: 200px;
   }
-
+  
   .carousel-card .card-left {
     padding: 8px !important;
   }
@@ -1952,14 +1944,13 @@ section.section-2 .feature p {
   .carousel-wrapper {
     display: flex;
     transition: transform 0.3s ease;
-    width: 100%;
-    /* 4 cards * 100% */
+    width: max-content;
   }
 
   .carousel-card {
-    width: 400px;
     flex-shrink: 0;
-    padding: 0 10px;
+    display: flex;
+    justify-content: center;
   }
 
   .carousel-card .cards {

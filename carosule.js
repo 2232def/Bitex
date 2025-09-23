@@ -4,15 +4,53 @@ const nextBtn = document.getElementById("nextBtn");
 
 if (carouselWrapper && prevBtn && nextBtn) {
   let currentIndex = 0;
-  const slides = Array.from(carouselWrapper.children);
-  const totalCards = slides.length;
-  const cardWidth = 320; // 300px card + 20px padding (10px each side)
+  const totalCards = carouselWrapper.children.length;
 
   function updateCarousel() {
-    const translateX = -(currentIndex * cardWidth);
+    const screenWidth = window.innerWidth;
+    let cardWidth, gap;
+    
+    // Simple responsive card sizing with large gaps for single card visibility
+    if (screenWidth <= 326) {
+      cardWidth = 280;
+      gap = screenWidth * 0.8; // Large gap to hide other cards
+    } else if (screenWidth <= 480) {
+      cardWidth = 320;
+      gap = screenWidth * 0.7; // Large gap to hide other cards
+    } else if (screenWidth <= 768) {
+      cardWidth = 380;
+      gap = screenWidth * 0.6; // Large gap to hide other cards
+    } else {
+      cardWidth = 400;
+      gap = screenWidth * 0.5; // Large gap to hide other cards
+    }
+
+    // Calculate container padding for equal spacing
+    const containerWidth = carouselWrapper.parentElement.offsetWidth;
+    const containerPadding = (containerWidth - cardWidth) / 2;
+    
+    // Set container padding
+    carouselWrapper.parentElement.style.paddingLeft = `${containerPadding}px`;
+    carouselWrapper.parentElement.style.paddingRight = `${containerPadding}px`;
+    
+    // Apply the transform to slide cards (same sliding mechanism)
+    const translateX = -(currentIndex * (cardWidth + gap));
     carouselWrapper.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button states
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === totalCards - 1;
+    
+    // Set card widths and large gaps dynamically
+    Array.from(carouselWrapper.children).forEach((card, index) => {
+      card.style.width = `${cardWidth}px`;
+      card.style.marginRight = `${gap}px`;
+    });
+    
+    // Remove margin from last card
+    if (carouselWrapper.children.length > 0) {
+      carouselWrapper.children[carouselWrapper.children.length - 1].style.marginRight = '0px';
+    }
   }
 
   function goTo(index) {
@@ -20,21 +58,18 @@ if (carouselWrapper && prevBtn && nextBtn) {
     updateCarousel();
   }
 
+  // Event listeners
   nextBtn.addEventListener("click", () => goTo(currentIndex + 1));
   prevBtn.addEventListener("click", () => goTo(currentIndex - 1));
 
-  // Touch/swipe support
+  // Touch support
   let startX = 0;
   let isDragging = false;
 
-  carouselWrapper.addEventListener(
-    "touchstart",
-    (e) => {
-      startX = e.touches[0].clientX;
-      isDragging = true;
-    },
-    { passive: true }
-  );
+  carouselWrapper.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  }, { passive: true });
 
   carouselWrapper.addEventListener("touchend", (e) => {
     if (!isDragging) return;
@@ -46,6 +81,9 @@ if (carouselWrapper && prevBtn && nextBtn) {
     isDragging = false;
   });
 
-  // Initial setup
+  // Handle resize
+  window.addEventListener('resize', updateCarousel);
+
+  // Initialize
   updateCarousel();
 }
