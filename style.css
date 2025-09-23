@@ -310,7 +310,6 @@ html {
 
   .Language {
     margin-left: 230px;
-    padding: 0 1rem;
     justify-content: center;
     gap: 0.25rem;
   }
@@ -412,7 +411,7 @@ html {
 }
 
 /* Very small screens (320px and below) */
-@media (max-width: 320px) {
+@media (max-width: 328px) {
   .navbar {
     padding: 0 0.5rem;
   }
@@ -427,13 +426,12 @@ html {
   }
 
   .lang-button {
-    padding: 0.2rem 0.4rem;
     font-size: 0.6rem;
   }
 
   .Language {
     gap: 0.25rem;
-    margin-left: 100px;
+    margin-left: 72px;
   }
 }
 
