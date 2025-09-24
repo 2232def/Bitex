@@ -1401,7 +1401,7 @@ section.section-2 .feature p {
   }
 
   .section-4 .container .cards .card-left .country {
-    font-size: 11px;
+    font-size: 15px;
     padding: 4px 10px;
   }
 
@@ -1552,6 +1552,11 @@ section.section-2 .feature p {
     width: 100vw;
   }
 
+  .read-more-container {
+    margin-top: 100px;
+
+  }
+
   .footer-top {
     flex-direction: column;
     gap: 30px;
@@ -1700,7 +1705,7 @@ section.section-2 .feature p {
     overflow: hidden;
     padding: 40px 0 60px;
     background: #000;
-    padding-left: 132px;
+    padding-left: 86.5px;
     padding-right: 132px;
 
   }
@@ -1732,7 +1737,6 @@ section.section-2 .feature p {
   }
 
   .carousel-card .card-left .country {
-    background: #f5f5f5;
     display: inline-block;
     padding: 4px 12px;
     border-radius: 4px;
@@ -1788,7 +1792,7 @@ section.section-2 .feature p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 550px;
+    gap: 600px;
     padding: 0 20px;
     position: absolute;
     top: 50%;
@@ -1857,8 +1861,25 @@ section.section-2 .feature p {
   }
 
   .section-4 .carousel-card {
-    padding: 0px 91px 0px 45px;
+    padding: 0px 91px 0px -1px;
 
+  }
+
+  /* Specific margins for individual cards under 326px */
+  .section-4 .carousel-card:nth-child(1) {
+    margin-left: 59px !important; 
+  }
+
+  .section-4 .carousel-card:nth-child(2) {
+    margin-left: -20px !important;
+  }
+
+  .section-4 .carousel-card:nth-child(3) {
+    margin-left: -6px !important;
+  }
+
+  .section-4 .carousel-card:nth-child(4) {
+    margin-left: 1px !important;
   }
 
   .carousel-card .card-left h3 {
@@ -2529,9 +2550,6 @@ section.section-2 .feature p {
   }
 
   .section-6-carousel-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
     color: white;
     width: 50px;
     height: 50px;
@@ -2542,11 +2560,6 @@ section.section-2 .feature p {
     transition: all 0.3s ease;
     font-size: 24px;
     pointer-events: auto;
-    backdrop-filter: blur(10px);
-  }
-
-  .section-6-carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
   }
 
   .section-6-carousel-btn:disabled {
