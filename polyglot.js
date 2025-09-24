@@ -261,6 +261,10 @@ function switchLanguage(language) {
         updateContent();
         setActiveLanguage(language);
         
+        // Apply language-specific body classes for font switching
+        document.body.classList.remove('japanese', 'english');
+        document.body.classList.add(language === 'ja' ? 'japanese' : 'english');
+        
         // Store language preference in localStorage
         localStorage.setItem('selectedLanguage', language);
         
@@ -311,6 +315,10 @@ function getTranslation(key, language = null) {
 
 // Initialize the language switcher
 function initLanguageSwitcher() {
+    // Set initial body class for font switching
+    document.body.classList.remove('japanese', 'english');
+    document.body.classList.add(currentLanguage === 'ja' ? 'japanese' : 'english');
+    
     updateContent();
     setActiveLanguage(currentLanguage);
     bindLanguageEvents();
