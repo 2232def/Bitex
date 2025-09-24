@@ -11,11 +11,25 @@ if (section6CarouselWrapper && section6PrevBtn && section6NextBtn) {
   const section6TotalCards = section6Slides.length;
 
   function updateSection6Carousel() {
-    // Base offset: -140px to show previous card
-    // Additional offset: -500px per slide
-    const baseOffset = 140;
-    const nextoffset = 80;
-    const translateX = baseOffset - section6CurrentIndex * 500 - nextoffset;
+    const screenWidth = window.innerWidth;
+    let translateX;
+
+    if (screenWidth <= 425) {
+      // For 425px and below (including 326px): show only one card at a time, no offset
+      translateX = -section6CurrentIndex * screenWidth;
+    } else if (screenWidth >= 639 && screenWidth <= 1024) {
+      // For 1024px to 639px range: center the active card
+      const cardWidth = 396.730;
+      const containerCenter = screenWidth / 2;
+      const cardCenter = cardWidth / 2;
+      translateX = containerCenter - cardCenter - (section6CurrentIndex * cardWidth);
+    } else {
+      // Original logic for screens larger than 1024px
+      const baseOffset = 80;
+      const nextoffset = 80;
+      translateX = baseOffset - section6CurrentIndex * 500 - nextoffset;
+    }
+    
     section6CarouselWrapper.style.transform = `translateX(${translateX}px)`;
 
     section6PrevBtn.disabled = section6CurrentIndex === 0;

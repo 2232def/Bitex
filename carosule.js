@@ -18,7 +18,7 @@ if (carouselWrapper && prevBtn && nextBtn) {
       cardWidth = 420;
       gap = screenWidth * 0.7; // Large gap to hide other cards
     } else if (screenWidth <= 768) {
-      cardWidth = 380;
+      cardWidth = 680;
       gap = screenWidth * 0.6; // Large gap to hide other cards
     } else {
       cardWidth = 400;
