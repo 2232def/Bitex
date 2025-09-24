@@ -8,8 +8,6 @@
 body {
   background-color: #f8f8f8;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
   width: 100%;
   font-family: Inter;
 }
@@ -1868,11 +1866,11 @@ section.section-2 .feature p {
 
   /* Specific margins for individual cards under 326px */
   .section-4 .carousel-card:nth-child(1) {
-    margin-left: 59px !important; 
+    margin-left: 109px !important; 
   }
 
   .section-4 .carousel-card:nth-child(2) {
-    margin-left: -20px !important;
+    margin-left:-8px !important;
   }
 
   .section-4 .carousel-card:nth-child(3) {
@@ -1880,7 +1878,7 @@ section.section-2 .feature p {
   }
 
   .section-4 .carousel-card:nth-child(4) {
-    margin-left: 1px !important;
+    margin-left: -9px !important;
   }
 
   .carousel-card .card-left h3 {
@@ -2931,6 +2929,10 @@ section.section-2 .feature p {
 
 /* Very small screens (320px and below) */
 @media (max-width: 320px) {
+  .section-8{
+    width: 100vw;
+  }
+
   .footer {
     padding: 35px 10px 20px;
   }
