@@ -1472,7 +1472,8 @@ section.section-2 .feature p {
 
   /* Section 6 - Recruit */
   .section-6 {
-    padding: 60px 30px;
+    height: 879px !important;
+    padding: 60px 0px;
   }
 
   .section-6 .text h1 {
@@ -1487,7 +1488,6 @@ section.section-2 .feature p {
 
   .section-6 .cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
     margin-bottom: 40px;
   }
 
@@ -1705,6 +1705,7 @@ section.section-2 .feature p {
     overflow: hidden;
     padding: 40px 0 60px;
     background: #000;
+    margin-left: -98px;
     padding-left: 86.5px;
     padding-right: 132px;
 
@@ -2558,7 +2559,7 @@ section.section-2 .feature p {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 24px;
+    font-size: 44px;
     pointer-events: auto;
   }
 
