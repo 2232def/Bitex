@@ -5,7 +5,7 @@
 /* ========================================
    LARGE TABLET/SMALL DESKTOP - 1024px
    ======================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     .navbar {
         padding: 0 1.5rem;
     }
@@ -491,15 +491,11 @@
 /* ========================================
    MEDIUM TABLET - 900px
    ======================================== */
-@media (max-width: 900px) {
-
-    /* Section 2 - About Section */
+/* @media (max-width: 900px) and (min-width: ) {
     section.section-2 {
         margin-left: 6px;
         width: calc(100% - 50px);
     }
-
-    /* Navbar */
     .navbar {
         padding: 0 1.2rem;
     }
@@ -524,14 +520,13 @@
         padding: 0.25rem 0.5rem;
         font-size: 0.65rem;
     }
-}
+} */
 
 /* ========================================
    SMALL TABLET - 800px
    ======================================== */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
 
-    /* Navbar */
     .navbar {
         padding: 0 1rem;
     }
@@ -556,14 +551,14 @@
         padding: 0.2rem 0.4rem;
         font-size: 0.6rem;
     }
-}
+} */
 
 
 
 /* ========================================
    TABLET LANDSCAPE - 768px
    ======================================== */
-@media (max-width: 769px) {
+@media (max-width: 769px) and (min-width: 639px) {
     .section-1 {
         height: 100vh;
         width: 100vw
@@ -794,7 +789,7 @@
 
     .section-4 .network-section span {
         font-size: 14px;
-        font-weight:bold; 
+        font-weight: bold;
     }
 
     .section-4 .container .cards-section {
@@ -833,7 +828,7 @@
         width: 100%;
     }
 
-    
+
     .carousel-card .cards {
         width: 100%;
         height: auto;
@@ -1330,23 +1325,21 @@
         display: none;
     }
 
-    /* Show carousel */
+    /* Show carousel for 640px and below */
     .carousel-container {
         display: block;
         position: relative;
         width: 100%;
         overflow: hidden;
         padding: 40px 0 60px;
-        margin-left: -98px;
-        padding-left: 86.5px;
-        padding-right: 132px;
-
+        max-width: 640px;
+        margin: 0 auto;
     }
 
     .carousel-wrapper {
         display: flex;
         transition: transform 0.3s ease;
-        width: auto;
+        width: max-content;
     }
 
     .carousel-card {
@@ -1479,6 +1472,7 @@
    TABLET RANGE - 768px to 639px  
    ======================================== */
 @media (max-width: 768px) and (min-width: 639px) {
+
     /* Section 6 - Recruit Carousel for 768px-639px range */
     .section-6 {
         height: 879px !important;
@@ -1631,7 +1625,7 @@
 /* ========================================
    MOBILE LANDSCAPE - 640px
    ======================================== */
-@media (max-width: 640px)  {
+@media (max-width: 640px) {
     .section-1 {
         padding: 4rem 1rem 2rem;
         min-height: 900px;
@@ -1911,44 +1905,26 @@
         display: none;
     }
 
-    /* Show carousel */
-    .carousel-container {
-        display: block;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding: 40px 0 60px;
-    }
-
-    .carousel-wrapper {
-        display: flex;
-        transition: transform 0.3s ease;
-        width: max-content;
-    }
-
     .carousel-card {
-        flex-shrink: 0;
+        flex: 0 0 460px;
+        width: 460px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
-    /* Specific margins for individual cards */
-    .section-4 .carousel-card:nth-child(1) {
-        margin-left: 73px;
-    }
-
-    .section-4 .carousel-card:nth-child(3) {
-        margin-left: 13px;
-    }
-
+    /* Remove individual card margins - let JS handle positioning */
+    .section-4 .carousel-card:nth-child(1),
+    .section-4 .carousel-card:nth-child(2),
+    .section-4 .carousel-card:nth-child(3),
     .section-4 .carousel-card:nth-child(4) {
-        margin-left: -4px;
+        margin-left: 0 !important;
     }
 
     .carousel-card .cards {
-        width: 100%;
+        width: 460px;
         height: auto;
-        min-height: 700px;
+        min-height: 650px;
         background-color: white;
         overflow: hidden;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -2018,15 +1994,17 @@
     /* Carousel Navigation */
     .carousel-navigation {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 297px !important;
-
         padding: 0 20px;
         position: absolute;
         top: 50%;
-        left: 0px;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
         z-index: 30;
+        max-width: 640px;
+        margin: 0 auto;
     }
 
     .carousel-btn {
@@ -2521,29 +2499,127 @@
 /* ========================================
    MOBILE PORTRAIT - 480px
    ======================================== */
-@media (max-width: 480px) and (min-width: 427px) {
+@media (max-width: 480px) and (min-width: 420px) {
 
     /* Section 1 - Hero Section */
     .navbar {
-        padding: 0 0.75rem;
+        padding: 0 1rem;
     }
 
     .navbar-container {
-        height: 52px;
+        height: 56px;
     }
 
     .navbar-container .logo img {
-        height: 28px;
+        height: 37.28px;
     }
 
-    .lang-button {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.65rem;
+    .mobile-menu-toggle {
+        display: flex;
+        margin-right: 9.82px;
     }
 
     .Language {
+        margin-left: 177px;
+        justify-content: center;
         gap: 0.25rem;
-        margin-left: 211px;
+    }
+
+    .navbar-container {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f8f8f8;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 40;
+    }
+
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Switch to abbreviated text on mobile */
+    .lang-button .full-text {
+        display: none;
+    }
+
+    .lang-button .short-text {
+        display: inline;
+    }
+
+    .lang-button {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+        min-width: 35px;
+    }
+
+    /* Language buttons - JP/EN format for mobile */
+    .Language {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .Language::before {
+        content: "JP/EN";
+        font-size: 14px;
+        font-weight: 500;
+        color: #2a2a2a;
+        padding: 0.375rem 0.75rem;
+        transition: all 0.2s ease;
+        display: block;
+        text-align: center;
+        background: transparent;
+    }
+
+    .Language:hover::before {
+        background: #f0f0f0;
+    }
+
+    .Language.jp-active::before {
+        content: "JP/EN";
+        background: #ffffff00;
+        color: #000000;
+    }
+
+    .Language.en-active::before {
+        content: "JP/EN";
+        background: #2a2a2a;
+        color: #ffffff;
+    }
+
+    .lang-button {
+        display: none;
     }
 
     .section-1 {
@@ -2632,29 +2708,73 @@
         padding: 0 8px;
     }
 
+    /* Hide desktop layout */
+    .section-4 .container .cards-section {
+        display: none;
+    }
+
+    /* Responsive carousel container widths */
+    .carousel-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 0 60px;
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: max-content;
+    }
+
+    .carousel-card {
+        flex: 0 0 380px;
+        width: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-card .cards {
+        width: 296px !important;
+        height: auto !important;
+        min-height: 600px;
+        background-color: white !important;
+        overflow: hidden;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3) !important;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    /* Remove specific margins - let JS handle centering */
+    .section-4 .carousel-card:nth-child(1),
+    .section-4 .carousel-card:nth-child(2),
+    .section-4 .carousel-card:nth-child(3),
+    .section-4 .carousel-card:nth-child(4) {
+        margin-left: 0 !important;
+    }
+
+    /* Carousel Navigation for 480px-426px */
+    .carousel-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 30;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
     .background {
         height: 900px !important;
-    }
-
-
-    .section-4 .carousel-navigation {
-        gap: 350px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(1) {
-        margin-left: 115px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(2) {
-        margin-left: 5px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(3) {
-        margin-left: -6px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(4) {
-        margin-left: 1px !important;
     }
 
     .section-7 {
@@ -2748,14 +2868,213 @@
 }
 
 /* ========================================
-   SMALL MOBILE - 425px
+   SMALL MOBILE - 425px to 327px
    ======================================== */
-@media (max-width: 425px) {
+@media (max-width: 425px) and (min-width: 327px) {
+
+    /* Navbar responsive styles for 425px-327px */
+    .navbar {
+        padding: 0 0.75rem;
+    }
+
+    .navbar-container {
+        height: 52px;
+    }
+
+    .navbar-container .logo img {
+        height: 32px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        margin-right: 8px;
+    }
+
+    .Language {
+        margin-left: 180px;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .navbar-container {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f8f8f8;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 40;
+    }
+
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Language buttons - JP/EN format for 425px-327px */
+    .Language {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .Language::before {
+        content: "JP/EN";
+        font-size: 13px;
+        font-weight: 500;
+        color: #2a2a2a;
+        padding: 0.3rem 0.6rem;
+        transition: all 0.2s ease;
+        display: block;
+        text-align: center;
+        background: transparent;
+    }
+
+    .Language:hover::before {
+        background: #f0f0f0;
+    }
+
+    .Language.jp-active::before {
+        content: "JP/EN";
+        background: #ffffff00;
+        color: #000000;
+    }
+
+    .Language.en-active::before {
+        content: "JP/EN";
+        background: #2a2a2a;
+        color: #ffffff;
+    }
+
+    .lang-button {
+        display: none;
+    }
+
+    /* Section 4 carousel setup for 425px-327px */
+    .carousel-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 0 60px;
+        margin: 0 auto;
+        max-width: 425px;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: max-content;
+    }
+
+    .carousel-card {
+        flex: 0 0 320px;
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-card .cards {
+        width: 320px;
+        height: auto;
+        min-height: 550px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Remove specific margins - let JS handle centering */
+    .section-4 .carousel-card:nth-child(1),
+    .section-4 .carousel-card:nth-child(2),
+    .section-4 .carousel-card:nth-child(3),
+    .section-4 .carousel-card:nth-child(4) {
+        margin-left: 0 !important;
+    }
+
+    /* Carousel Navigation for 425px-327px */
+    .carousel-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 30;
+        max-width: 425px;
+        margin: 0 auto;
+    }
+
+    .content-container h1 {
+        font-size: 62.885372161865234px;
+    }
+
+    section.section-2 header.hero h1 {
+        margin: 0 0 12px 0;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #000;
+        line-height: 1.2;
+    }
+
+    section.section-2 p.subtitle {
+
+        font-weight: bold;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    section.section-2 .label {
+        color: rgba(128, 128, 128, 1);
+    }
+
+
+    section.section-2 .row:last-child .label {
+        margin-bottom: 25px;
+
+        font-size: 18px;
+        align-items: start;
+        color: rgba(128, 128, 128, 1);
+    }
 
     section.section-2 .container {
         max-width: 700px;
         margin-left: auto !important;
         margin-right: auto !important;
+        padding-top: 58px;
     }
 
     section.section-2 {
@@ -2783,6 +3102,18 @@
         max-width: 20% !important;
     }
 
+    .section-4 .network-section h1 {
+        color: #000;
+        font-size: 36px;
+        margin-bottom: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .section-7 h1 {
+        font-weight: bold;
+    }
+
 
     .section-4 .carousel-navigation {
         gap: 288px !important;
@@ -2807,6 +3138,13 @@
 
     .news-left a {
         padding: 10px 30px !important;
+    }
+
+    .news-left h2 {
+        margin: 0 0 12px 0;
+        font-size: 36px;
+        font-weight: bold;
+        color: #000;
     }
 
 
@@ -2838,7 +3176,7 @@
         font-size: 34.19px !important;
     }
 
-
+    /* Enhanced navbar responsive styles for 326px and below */
     .navbar {
         padding: 0 0.5rem;
     }
@@ -2849,25 +3187,175 @@
 
     .navbar-container .logo img {
         height: 24px;
-
     }
 
-    .lang-button {
-        font-size: 0.6rem;
+    .mobile-menu-toggle {
+        display: flex;
+        margin-right: 6px;
     }
 
     .Language {
-        gap: 0.25rem;
         margin-left: 92px;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .navbar-container {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f8f8f8;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 40;
+    }
+
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Language buttons - JP/EN format for 326px and below */
+    .Language {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .Language::before {
+        content: "JP/EN";
+        font-size: 11px;
+        font-weight: 500;
+        color: #2a2a2a;
+        padding: 0.25rem 0.5rem;
+        transition: all 0.2s ease;
+        display: block;
+        text-align: center;
+        background: transparent;
+    }
+
+    .Language:hover::before {
+        background: #f0f0f0;
+    }
+
+    .Language.jp-active::before {
+        content: "JP/EN";
+        background: #ffffff00;
+        color: #000000;
+    }
+
+    .Language.en-active::before {
+        content: "JP/EN";
+        background: #2a2a2a;
+        color: #ffffff;
+    }
+
+    .lang-button {
+        display: none;
+    }
+
+    /* Section 4 carousel setup for 326px and below */
+    .carousel-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 0 60px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: max-content;
+        gap: 65px !important;
+        padding: 0 50px;
+    }
+
+    .carousel-card {
+        flex: 0 0 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-card .cards {
+        width: 180px;
+        height: auto;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Remove specific margins - let JS handle centering */
+    .section-4 .carousel-card:nth-child(1) {
+        margin-left: 0 !important;
+    }
+
+    .section-4 .carousel-card:nth-child(2) {
+        margin-left: 0 !important;
+    }
+
+    .section-4 .carousel-card:nth-child(3) {
+        margin-left: 0 !important;
+    }
+
+    .section-4 .carousel-card:nth-child(4) {
+        margin-left: 0 !important;
+    }
+
+    /* Carousel Navigation for 326px and below */
+    .carousel-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 30;
+        max-width: 326px;
+        margin: 0 auto;
     }
 
     section.section-2 {
         padding: 0px 0 40px;
         margin-top: 203px !important;
-    }
-
-    .section-4 .carousel-navigation {
-        gap: 190px;
     }
 
     section.section-2 .container {
@@ -2941,8 +3429,9 @@
     }
 
     .section-4 .background {
-        height: 690px !important;
+        height: 770px !important;
     }
+
 
     .section-4 .carousel-navigation {
         gap: 200px;
@@ -2950,27 +3439,6 @@
 
     .carousel-card .card-left {
         padding: 8px !important;
-    }
-
-    .section-4 .carousel-card {
-        padding: 0px 91px 0px -1px;
-
-    }
-
-    .section-4 .carousel-card:nth-child(1) {
-        margin-left: 112px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(2) {
-        margin-left: -20px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(3) {
-        margin-left: -6px !important;
-    }
-
-    .section-4 .carousel-card:nth-child(4) {
-        margin-left: 1px !important;
     }
 
     .carousel-card .card-left h3 {
@@ -2998,9 +3466,9 @@
         width: 100%;
     }
 
-    .carousel-wrapper {
+    /* .carousel-wrapper {
         gap: 8px !important;
-    }
+    } */
 
     .section-5 {
         height: 719px;
@@ -3025,6 +3493,12 @@
         gap: 12px;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         border-bottom: #000000 1px solid !important;
+    }
+
+
+
+    .news-left {
+        padding: 0 0 0px 13px !important;
     }
 
     .section-6 {

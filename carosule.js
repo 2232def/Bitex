@@ -8,49 +8,49 @@ if (carouselWrapper && prevBtn && nextBtn) {
 
   function updateCarousel() {
     const screenWidth = window.innerWidth;
-    let cardWidth, gap;
+    let cardWidth, containerMaxWidth, cardGap = 0;
     
-    // Simple responsive card sizing with large gaps for single card visibility
+    // Match exact CSS breakpoints and card sizes
     if (screenWidth <= 326) {
-      cardWidth = 350;
-      gap = screenWidth * 0.8; // Large gap to hide other cards
+      cardWidth = 200;
+      cardGap = 65;
+      containerMaxWidth = 326;
+    } else if (screenWidth <= 420) {
+      cardWidth = 320;
+      containerMaxWidth = 420;
     } else if (screenWidth <= 480) {
-      cardWidth = 420;
-      gap = screenWidth * 0.7; // Large gap to hide other cards
-    } else if (screenWidth <= 768) {
-      cardWidth = 680;
-      gap = screenWidth * 0.6; // Large gap to hide other cards
+      cardWidth = 380;
+      containerMaxWidth = 480;
+    } else if (screenWidth <= 640) {
+      cardWidth = 460;
+      containerMaxWidth = 640;
     } else {
-      cardWidth = 400;
-      gap = screenWidth * 0.5; // Large gap to hide other cards
+      // Above 640px - use desktop layout, return early
+      return;
     }
 
-    // Calculate container padding for equal spacing
-    const containerWidth = carouselWrapper.parentElement.offsetWidth;
-    const containerPadding = (containerWidth - cardWidth) / 2;
+    // Get actual container width (limited by max-width)
+    const actualContainerWidth = Math.min(screenWidth, containerMaxWidth);
     
-    // Set container padding
-    carouselWrapper.parentElement.style.paddingLeft = `${containerPadding}px`;
-    carouselWrapper.parentElement.style.paddingRight = `${containerPadding}px`;
-    
-    // Apply the transform to slide cards (same sliding mechanism)
-    const translateX = -(currentIndex * (cardWidth + gap));
+    // Center the card in the container
+
+    // For 326px and below, account for gap between cards
+    let translateX;
+    if (screenWidth <= 326) {
+      // Account for padding (50px) and center the card
+      const paddingOffset = 50;
+      translateX = -paddingOffset - (currentIndex * (cardWidth + cardGap)) + ((actualContainerWidth - cardWidth) / 2);
+    } else {
+      translateX = -(currentIndex * cardWidth) + ((actualContainerWidth - cardWidth) / 2);
+    }
     carouselWrapper.style.transform = `translateX(${translateX}px)`;
     
     // Update button states
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === totalCards - 1;
     
-    // Set card widths and large gaps dynamically
-    Array.from(carouselWrapper.children).forEach((card, index) => {
-      card.style.width = `${cardWidth}px`;
-      card.style.marginRight = `${gap}px`;
-    });
-    
-    // Remove margin from last card
-    if (carouselWrapper.children.length > 0) {
-      carouselWrapper.children[carouselWrapper.children.length - 1].style.marginRight = '0px';
-    }
+    // Let CSS handle card widths - don't override them
+    // CSS now properly defines flex-basis for each breakpoint
   }
 
   function goTo(index) {
