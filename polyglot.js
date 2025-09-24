@@ -18,6 +18,10 @@ let translations = {
         "nav.recruit.sub": "採用情報",
         "nav.inquiry.sub": "お問い合わせ",
 
+        // Recruit dropdown
+        "nav.recruit.info": "採用情報",
+        "nav.recruit.requirements": "募集要項",
+
         // Section 1
         "section1.title": "世界を繋ぐ、新たな創造を",
 
@@ -128,6 +132,10 @@ let translations = {
         // "nav.news.sub": "News",
         // "nav.recruit.sub": "Recruit",
         // "nav.inquiry.sub": "Inquiry",
+
+        // Recruit dropdown
+        "nav.recruit.info": "Recruitment Information",
+        "nav.recruit.requirements": "Job Requirements",
 
         // Section 1
         "section1.title": "Connecting the World, Creating New Possibilities",
