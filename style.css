@@ -1656,9 +1656,11 @@ section.section-2 .feature p {
   }
 
   .section-4 .background {
-    height: 800px;
+    height: 900px !important;
     top: 120px;
-    margin-top: 0;
+    margin-top: 150px !important;
+    position: absolute;
+    z-index: -1;
   }
 
   .section-4 .network-section {
@@ -1689,7 +1691,6 @@ section.section-2 .feature p {
   .section-4 .container {
     position: relative;
     padding-top: 0;
-    background: #000;
     margin: 0;
   }
 
@@ -1705,7 +1706,6 @@ section.section-2 .feature p {
     width: 100%;
     overflow: hidden;
     padding: 40px 0 60px;
-    background: #000;
     margin-left: -98px;
     padding-left: 86.5px;
     padding-right: 132px;
@@ -1847,9 +1847,31 @@ section.section-2 .feature p {
 
 
 @media (max-width: 480px) {
+  .background{
+    height: 900px !important;
+  }
+
+
   .section-4 .carousel-navigation {
     gap: 350px;
   }
+
+    .section-4 .carousel-card:nth-child(1) {
+    margin-left: 115px  !important; 
+  }
+
+  .section-4 .carousel-card:nth-child(2) {
+    margin-left: 5px !important;
+  }
+
+  .section-4 .carousel-card:nth-child(3) {
+    margin-left: -6px !important;
+  }
+
+  .section-4 .carousel-card:nth-child(4) {
+    margin-left: 1px !important;
+  }
+
 }
 
 /* Responsive styles for 326px - Carousel cards only */
@@ -1950,7 +1972,6 @@ section.section-2 .feature p {
   .section-4 .container {
     position: relative;
     padding-top: 0;
-    background: #000;
     margin: 0;
   }
 
@@ -1966,7 +1987,6 @@ section.section-2 .feature p {
     width: 100%;
     overflow: hidden;
     padding: 40px 0 60px;
-    background: #000;
   }
 
   .carousel-wrapper {
