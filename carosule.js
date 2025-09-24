@@ -12,10 +12,10 @@ if (carouselWrapper && prevBtn && nextBtn) {
     
     // Simple responsive card sizing with large gaps for single card visibility
     if (screenWidth <= 326) {
-      cardWidth = 280;
+      cardWidth = 350;
       gap = screenWidth * 0.8; // Large gap to hide other cards
     } else if (screenWidth <= 480) {
-      cardWidth = 320;
+      cardWidth = 420;
       gap = screenWidth * 0.7; // Large gap to hide other cards
     } else if (screenWidth <= 768) {
       cardWidth = 380;

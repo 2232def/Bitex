@@ -878,9 +878,9 @@ section.section-2 .feature p {
 
   }
 
-.section-4 .carousel-navigation{
-  gap: 190px;
-}
+  .section-4 .carousel-navigation {
+    gap: 190px;
+  }
 
   section.section-2 .container {
     padding: 0 10px;
@@ -1702,7 +1702,7 @@ section.section-2 .feature p {
     background: #000;
     padding-left: 132px;
     padding-right: 132px;
-    
+
   }
 
   .carousel-wrapper {
@@ -1840,20 +1840,25 @@ section.section-2 .feature p {
 }
 
 
-  @media (max-width: 480px) {
-    .section-4 .carousel-navigation {
-      gap: 250px;
-    }
+@media (max-width: 480px) {
+  .section-4 .carousel-navigation {
+    gap: 350px;
   }
+}
 
 /* Responsive styles for 326px - Carousel cards only */
 @media (max-width: 326px) {
   .section-4 .carousel-navigation {
     gap: 200px;
   }
-  
+
   .carousel-card .card-left {
     padding: 8px !important;
+  }
+
+  .section-4 .carousel-card {
+    padding: 0px 91px 0px 45px;
+
   }
 
   .carousel-card .card-left h3 {
@@ -1953,6 +1958,19 @@ section.section-2 .feature p {
     justify-content: center;
   }
 
+  /* Specific margins for individual cards */
+  .section-4 .carousel-card:nth-child(1) {
+    margin-left: 73px;
+  }
+
+  .section-4 .carousel-card:nth-child(3) {
+    margin-left: 13px;
+  }
+
+  .section-4 .carousel-card:nth-child(4) {
+    margin-left: -4px;
+  }
+
   .carousel-card .cards {
     width: 100%;
     height: auto;
@@ -2035,7 +2053,7 @@ section.section-2 .feature p {
     padding: 0 20px;
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 0px;
     z-index: 30;
   }
 
@@ -2851,6 +2869,7 @@ section.section-2 .feature p {
     gap: 25px;
     margin-bottom: 25px;
     padding-bottom: 25px;
+    padding-left: 34px;
   }
 
   .footer-column h3 {
