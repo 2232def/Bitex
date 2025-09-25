@@ -2672,9 +2672,12 @@
         padding: 0 0.25rem;
     }
 
+
+
     .content-container h1 {
         font-size: clamp(1.1rem, 6vw, 1.8rem);
         letter-spacing: -0.01em;
+        font-size: 67.19px;
     }
 
 
@@ -2947,6 +2950,12 @@
 
     .navbar-container .logo img {
         height: 32px;
+    }
+
+    .content-container h1 {
+        font-size: clamp(1.1rem, 6vw, 1.8rem);
+        letter-spacing: -0.01em;
+        font-size: 58.19px;
     }
 
     .mobile-menu-toggle {

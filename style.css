@@ -203,6 +203,7 @@ html {
 
 .dropdown {
   position: relative;
+  max-width: 138px;
 }
 
 .dropdown-trigger {
@@ -232,6 +233,11 @@ html {
   padding: 0 0 0 12px;
 }
 
+.dropdown.active span[data-polyglot="nav.recruit.sub"] {
+  background-color: rgba(225, 225, 225, 1);
+  padding: 0 0 0 12px;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -250,6 +256,10 @@ html {
   visibility: visible;
   transform: translateY(0);
   width: 137px;
+}
+
+.dropdown.active .recruit {
+  width: 120px;
 }
 
 /* .dropdown-title {
@@ -296,6 +306,7 @@ html {
   background-color: #000;
   color: #fff;
   border-left-color: #fff;
+  margin-right: 16px;
 }
 
 .navbar-menu li.dropdown {
