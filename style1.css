@@ -2506,12 +2506,12 @@
         filter: brightness(0) invert(1);
     }
 
-    /* .footer-logo {
+    .footer-logo {
         order: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-    } */
+    }
 
     .footer-logo img {
         max-height: 50px;
