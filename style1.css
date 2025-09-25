@@ -1900,7 +1900,7 @@
 
     .section-4 .network-section {
         color: #000;
-        padding: 40px 20px 30px;
+        padding: 0px 0px 0px 10px;
         text-align: left;
         background: transparent;
         position: relative;
@@ -3382,9 +3382,14 @@
         position: relative;
         width: 100%;
         overflow: hidden;
-        padding: 40px 0 60px;
+        padding: 40px 0 76px;
         margin: 0 auto;
         max-width: 100%;
+    }
+
+    .section-4 .background {
+        top: 147px;
+        margin-top: 0;
     }
 
 
@@ -3533,7 +3538,7 @@
     }
 
     .section-4 .background {
-        height: 770px !important;
+        height: 681px !important;
     }
 
     .section-4 .container .cards .card-left {
