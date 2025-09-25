@@ -367,7 +367,6 @@ section.section-2 header.hero h1 {
   font-size: 34px;
   letter-spacing: 0.2px;
   font-weight: bold;
-  font-family: 'Helvetica', sans-serif;
 }
 
 section.section-2 p.subtitle {
@@ -532,7 +531,7 @@ section.section-2 .feature p {
 .section-4 .network-section h1 {
   color: #000;
   font-size: 44px;
-  font-weight: 700;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -610,6 +609,7 @@ section.section-2 .feature p {
 .section-4 .container .cards .card-left .country {
   margin-bottom: 48px;
   font-size: 12px;
+  font-weight: bold;
   color: #666;
   text-transform: uppercase;
 }
@@ -857,12 +857,34 @@ section.section-2 .feature p {
   margin-top: 150px;
 }
 
-.section-6 .cards .card button {
-  margin-top: 350px;
-  padding: 5px;
-  color: rgba(51, 166, 171, 1);
+/* Style the container div */
+.section-6 .cards .card div {
+    margin-top: 350px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* Style the span text */
+.section-6 .cards .card div span {
+    color: rgba(51, 166, 171, 1);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 3;
+}
+
+/* Style the SVG */
+/* .section-6 .cards .card div svg {
+    width: 6px;
+    height: 8px;
+    flex-shrink: 0;
+} */
+
+/* Hover effect */
 
 .section-6-carousel-container {
   display: none;
@@ -984,6 +1006,35 @@ section.section-2 .feature p {
   /* center the logo block */
   padding: 16px 20px;
 }
+
+/* Section 6 Read More Button Override - All Breakpoints */
+/* .section-6-carousel-card .card-content .read-more-btn,
+.section-6-carousel-card .read-more-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: rgba(51, 166, 171, 1) !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 12px 20px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.section-6-carousel-card .card-content .read-more-btn:hover,
+.section-6-carousel-card .read-more-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.section-6-carousel-card .read-more-btn svg {
+  margin-left: 4px !important;
+} */
 
 
 
