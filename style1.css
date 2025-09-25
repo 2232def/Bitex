@@ -2829,6 +2829,15 @@
         font-weight: bold;
     }
 
+    .section-5 {
+        height: 700px;
+        width: 100vw;
+        margin: 0;
+        padding: 60px 70px;
+        display: flex;
+        justify-content: center;
+    }
+
     .section-7 .vision-pattern p {
         font-size: 15px;
         line-height: 1.7;
@@ -2837,7 +2846,7 @@
     }
 
     .section-4 .background {
-        height: 810px !important;
+        height: 910px !important;
         top: 120px;
         margin-top: 150px !important;
         position: absolute;
@@ -2891,6 +2900,13 @@
         width: 40px;
         height: 40px;
     }
+
+    .news-right::after {
+        content: '';
+        display: block;
+        min-height: 100px;
+    }
+
 
     .footer-social i img {
         width: 36px !important;
@@ -3171,6 +3187,17 @@
         width: 100%;
         max-width: 600px;
         padding: 0 15px;
+    }
+
+    .section-5 {
+        height: 1000px !important;
+        padding: 0px 0 172px 0px;
+    }
+
+    .news-right::after {
+        content: '';
+        display: none;
+        min-height: 100px;
     }
 
     .news-left {
