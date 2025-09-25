@@ -287,6 +287,7 @@
         padding: 85px 18px 0 18px;
     }
 
+
     .section-6 .text h1 {
         font-size: 39px;
     }
@@ -1650,6 +1651,36 @@
         opacity: 0.3;
         cursor: not-allowed;
     }
+
+    /* Only navbar menu active state for 768px-639px */
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+
+    /* Position dropdown menus to the right for Company and Recruit */
+    .dropdown-menu {
+        position: absolute !important;
+        left: auto !important;
+        right: -194px !important;
+        min-width: 200px !important;
+        transform: translateX(0) !important;
+        top: 86% !important;
+        z-index: 1000 !important;
+        background: rgba(225, 225, 225, 1) !important;
+    }
+
+    /* Ensure other nav items stay behind dropdown */
+    .navbar-menu li {
+        position: relative;
+        z-index: 1;
+    }
+
+    .dropdown.active {
+        z-index: 1001 !important;
+    }
 }
 
 /* ========================================
@@ -2662,6 +2693,13 @@
         display: none;
     }
 
+
+    .dropdown-list {
+        padding: 0px 0 1px 6px;
+    }
+
+
+
     .section-1 {
         padding: 3rem 0.5rem 1.5rem;
         height: 100vh;
@@ -3374,6 +3412,13 @@
 
     .lang-button {
         display: none;
+    }
+
+
+    .dropdown-list {
+        list-style: none;
+        padding: 0px 0 2px 12px;
+        margin: 0;
     }
 
     /* Section 4 carousel setup for 326px and below */
