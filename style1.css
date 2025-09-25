@@ -1854,7 +1854,7 @@
         width: 100vw;
         margin: 0;
         overflow-x: hidden;
-        background: url('building.png') no-repeat center center;
+        background: url('building.png') no-repeat center center #00000091;
         background-size: cover;
         position: relative;
     }
