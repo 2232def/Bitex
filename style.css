@@ -400,6 +400,19 @@ section.section-2 .left {
   min-width: 260px;
 }
 
+section.section-2 a.tag {
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: default;
+  min-width: auto;
+  width: 22px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #070707;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 section.section-2 .row {
   display: flex;
   gap: 20px;
@@ -674,41 +687,41 @@ section.section-2 .feature p {
 }
 
 
-  /* Specific margins for individual cards under 326px */
-  .section-4 .carousel-card:nth-child(1) {
-    margin-left: 112px !important;
-  }
+/* Specific margins for individual cards under 326px */
+.section-4 .carousel-card:nth-child(1) {
+  margin-left: 112px !important;
+}
 
-  .section-4 .carousel-card:nth-child(2) {
-    margin-left: -20px !important;
-  }
+.section-4 .carousel-card:nth-child(2) {
+  margin-left: -20px !important;
+}
 
-  .section-4 .carousel-card:nth-child(3) {
-    margin-left: -6px !important;
-  }
+.section-4 .carousel-card:nth-child(3) {
+  margin-left: -6px !important;
+}
 
-  .section-4 .carousel-card:nth-child(4) {
-    margin-left: 1px !important;
-  }
+.section-4 .carousel-card:nth-child(4) {
+  margin-left: 1px !important;
+}
 
-  .carousel-card .card-left h3 {
-    font-size: 14px !important;
-    margin-bottom: 6px !important;
-    line-height: 1.3 !important;
-  }
+.carousel-card .card-left h3 {
+  font-size: 14px !important;
+  margin-bottom: 6px !important;
+  line-height: 1.3 !important;
+}
 
-  .carousel-card .card-left p {
-    font-size: 11px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 4px !important;
-  }
+.carousel-card .card-left p {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 4px !important;
+}
 
-  .carousel-card .card-right {
-    min-width: 60px !important;
-    height: 60px !important;
-  }
+.carousel-card .card-right {
+  min-width: 60px !important;
+  height: 60px !important;
+}
 
-  /* .carousel-wrapper {
+/* .carousel-wrapper {
     gap: 8px !important;
   } */
 
@@ -845,7 +858,7 @@ section.section-2 .feature p {
   background-image: url('image1.png');
 }
 
- .cards .card:nth-child(2) {
+.cards .card:nth-child(2) {
   background-image: url('image2.png');
 
 }
@@ -870,22 +883,22 @@ section.section-2 .feature p {
 
 /* Style the container div */
 .section-6 .cards .card div {
-    margin-top: 350px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 1);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  margin-top: 350px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Style the span text */
 .section-6 .cards .card div span {
-    color: rgba(51, 166, 171, 1);
-    font-size: 14px;
-    font-weight: 500;
-    z-index: 3;
+  color: rgba(51, 166, 171, 1);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 3;
 }
 
 /* Style the SVG */
@@ -1046,8 +1059,3 @@ section.section-2 .feature p {
 .section-6-carousel-card .read-more-btn svg {
   margin-left: 4px !important;
 } */
-
-
-
-
-

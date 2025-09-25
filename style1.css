@@ -953,7 +953,7 @@
     /* Section 5 - News */
     .section-5 {
         height: auto;
-        padding: 0px 30px;
+        padding: 0px 30px 48px;
     }
 
     .news-container {
@@ -988,12 +988,12 @@
 
     .news-item {
         padding: 20px 0;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #000000;
     }
 
-    .news-item:last-child {
+    /* .news-item:last-child {
         border-bottom: none;
-    }
+    } */
 
     .news-date {
         font-size: 13px;
