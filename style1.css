@@ -2911,6 +2911,7 @@
     .footer-social i img {
         width: 36px !important;
         height: 36px !important;
+        margin-bottom: 29px;
     }
 
     .footer-logo img {
@@ -3224,6 +3225,7 @@
     .footer-social i img {
         width: 33px !important;
         height: 33px !important;
+        margin-bottom: 29px;
     }
 
     .footer-social {
@@ -3722,11 +3724,15 @@
     .footer-social i {
         width: 36px;
         height: 36px;
+
     }
 
     .footer-social i img {
         width: 33px !important;
         height: 33px !important;
+        margin-bottom: 22px;
+
+
     }
 
     .footer-logo img {
