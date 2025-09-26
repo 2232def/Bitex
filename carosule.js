@@ -24,7 +24,12 @@ if (carouselWrapper && prevBtn && nextBtn) {
     } else if (screenWidth <= 640) {
       cardWidth = 460;
       containerMaxWidth = 640;
-    } else {
+    } else if (screenWidth <= 768) {
+      cardWidth = 590;
+      containerMaxWidth = 768;
+    }
+    
+    else {
       // Above 640px - use desktop layout, return early
       return;
     }
@@ -40,6 +45,8 @@ if (carouselWrapper && prevBtn && nextBtn) {
       // Account for padding (50px) and center the card
       const paddingOffset = 50;
       translateX = -paddingOffset - (currentIndex * (cardWidth + cardGap)) + ((actualContainerWidth - cardWidth) / 2);
+    } else if(screenWidth <= 768 && screenWidth > 640) {
+      translateX = -currentIndex * cardWidth
     } else {
       translateX = -(currentIndex * cardWidth) + ((actualContainerWidth - cardWidth) / 2);
     }

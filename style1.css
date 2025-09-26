@@ -137,14 +137,14 @@
 
     /* Section 4 (Global Network) adjustments for 1024px */
     .section-4 {
-        height: 1000px;
+        height: 800px;
         margin-top: 80px;
     }
 
     .section-4 .background {
         top: 80px;
         margin-top: 60px;
-        height: 85%;
+        height: 80%;
     }
 
     .section-4 .network-section {
@@ -179,7 +179,7 @@
 
     .section-4 .container .cards {
         width: 420px;
-        height: 300px;
+        height: 245px;
         overflow: hidden;
         display: flex;
     }
@@ -187,7 +187,7 @@
     .section-4 .container .cards .card-left {
         flex: 1;
         width: 100%;
-        margin: 24px;
+        margin: 24px 24px 0 24px;
         display: flex;
         flex-direction: column;
         height: calc(100% - 48px);
@@ -239,6 +239,8 @@
         margin-top: auto;
         padding-top: 6px;
     }
+
+    .section-4
 
     /* Section 5 (News) adjustments for 1024px */
     .section-5 {
@@ -794,7 +796,7 @@
     .section-3 .business_line {
         font-size: 16px;
         line-height: 1.8;
-                color: rgb(255 255 255);
+        color: rgb(255 255 255);
     }
 
     .section-3 .business_title {
@@ -950,6 +952,22 @@
     .carousel-btn:disabled {
         opacity: 0.3;
         cursor: not-allowed;
+    }
+
+    .section-4 .carousel-card:nth-child(1) {
+        margin-left: 112px !important;
+    }
+
+    .section-4 .carousel-card:nth-child(2) {
+        margin-left: 7px !important;
+    }
+
+    .section-4 .carousel-card:nth-child(3) {
+        margin-left: 41px !important;
+    }
+
+    .section-4 .carousel-card:nth-child(4) {
+        margin-left: 42px !important;
     }
 
     /* Section 5 - News */
